@@ -111,3 +111,9 @@ Object of the project is to learning Ioinc 2 step by step.
         alert.present();
       }
       ```
+6. Implement the QuoteService to Store Favorited Quotes
+    * addQuoteToFavorites 
+    * removeQuoteFromFavorites
+    * getFavoriteQuotes
+    * update the app.module file to regsiter the QuoteService in the providers array.
+    * update the Quotes component Alert handler to use QuoteService to add Quote to Favorite

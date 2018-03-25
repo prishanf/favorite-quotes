@@ -1,3 +1,4 @@
+import { QuotesService } from './../../services/quotes.service';
 import { Quote } from './../../models/quote.interface';
 import { Category } from './../../models/category.interface';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,11 @@ export class QuotesPage implements OnInit{
 
   selectedCategory:Category;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+  constructor(
+    private navCtrl: NavController, 
+    private navParams: NavParams, 
+    private alertCtrl: AlertController,
+    private quoteService: QuotesService) {
   }
 
   ionViewDidLoad() {
@@ -36,6 +41,7 @@ export class QuotesPage implements OnInit{
           text:'Yes go ahead',
           handler: ()=> {
             console.log('Ok');
+            this.quoteService.addQuoteToFavorites(selectedQuote);
           }
         },
         {
