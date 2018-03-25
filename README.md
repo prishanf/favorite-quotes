@@ -77,3 +77,11 @@ Object of the project is to learning Ioinc 2 step by step.
         * `<button *ngFor="let quoteGroup of quoteCollection" ion-item>` add ion-item as a button to display quotes for each item in the *quoteCollection* via ngFor
         * `<ion-icon [name]="quoteGroup.icon" item-left></ion-icon>` use the ion-icon display the icon and format to left via item-left directive
         * `<h2>{{quoteGroup.category | uppercase}}</h2>` display the the category name and Uppercase via angular uppercase pipe
+  
+4. Implement Quotes Page to display the Quotes on selected category
+    * Pass data from Libaray Component to Quotes componet
+        * [navPush]="quotesPage" , [navParams]="quoteGroup"
+    * Implement the Quote Card
+        * `<ion-card *ngFor="let quote of selectedCategory?.quotes; let i = index">` repeate for each quote
+    
+
