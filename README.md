@@ -84,4 +84,30 @@ Object of the project is to learning Ioinc 2 step by step.
     * Implement the Quote Card
         * `<ion-card *ngFor="let quote of selectedCategory?.quotes; let i = index">` repeate for each quote
     
-
+5. Adding Alert to Favorite the Article
+    * `private alertCtrl: AlertController` to create the Alert in ionic
+    * Implement Alert 
+      ```javascript
+        const alert = this.alertCtrl.create({
+          title: 'Add Quote',
+          subTitle: 'Are you sure?',
+          message: 'Are you sure you want to add the quote?',
+          buttons:[
+            {
+              text:'Yes go ahead',
+              handler: ()=> {
+                console.log('Ok');
+              }
+            },
+            {
+              text:'No, I change my mind',
+              role:'cancel',
+              handler: ()=> {
+                console.log('Cancelled');
+              }
+            }
+          ]
+        });
+        alert.present();
+      }
+      ```
