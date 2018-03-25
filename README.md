@@ -36,3 +36,10 @@ Object of the project is to learning Ioinc 2 step by step.
   * ionic g page quote
   * ionic g page favorites
   * ionic g page settings
+
+2. Implement the TabsNavigation (Manualy Create the TabsPage component)
+  * Create a new folder under pages `tabs`
+  * Create a new file *tabs.ts* under *tabs* folder
+  * Implememnt the TabsPage Component (tabs.ts)
+  * Import the TabsPage Component on the app.module and add to declarations and entryComponent arrays
+  * Update the app.component point the root page to TabsPage `rootPage:any = TabsPage;`
