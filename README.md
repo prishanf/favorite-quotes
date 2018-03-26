@@ -144,4 +144,7 @@ Object of the project is to learning Ioinc 2 step by step.
             }
         });
       ``` 
-    
+
+9. Add Unfavorite Functionality to Quotes Page
+    * Add new `isQuoteFavorite` method to QuoteService method
+    * Display/Hide favorite/Unfavorite button based on the favorited state

@@ -22,6 +22,11 @@ export class FavoritesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FavoritesPage');
+
+  }
+
+  ionViewDidEnter(){
+    console.log('ionViewDidEnter FavoritesPage');
     this.quotes = this.quoteService.getFavoriteQuotes();
   }
 

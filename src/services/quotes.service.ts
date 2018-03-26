@@ -19,4 +19,10 @@ export class QuotesService {
     getFavoriteQuotes(){
         return this.favoriteQuotes.slice();//make it private so that array can not be updated by getting a referance to the instance
     }
+
+    isQuoteFavotite(quote: Quote){
+        return this.favoriteQuotes.find((quoteEl: Quote)=>{
+            return quoteEl.id ==quote.id;
+        });
+    }
 }

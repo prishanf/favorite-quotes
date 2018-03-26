@@ -31,7 +31,7 @@ export class QuotesPage implements OnInit{
     //this.selectedCategory = this.navParams.data;
   }
 
-  onAddToFavorite(selectedQuote:Quote){
+  onAddToFavorites(selectedQuote:Quote){
     const alert = this.alertCtrl.create({
       title: 'Add Quote',
       subTitle: 'Are you sure?',
@@ -54,6 +54,14 @@ export class QuotesPage implements OnInit{
       ]
     });
     alert.present();
+  }
+
+  onRemoveFromFavorites(selectedQuote:Quote){
+    this.quoteService.removeQuoteFromFavorites(selectedQuote);
+  }
+
+  isFavotite(quote:Quote){
+    return this.quoteService.isQuoteFavotite(quote);
   }
 
 }

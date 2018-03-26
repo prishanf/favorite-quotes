@@ -14,7 +14,10 @@
             <p class="author">{{quote.person}}</p>
         </ion-card-content>
         <ion-row>
-          <ion-col text-right><button ion-button clear small (click)="onAddToFavorite(quote)">Favorite</button></ion-col> 
+          <ion-col text-right>
+            <button ion-button clear small *ngIf="!isFavotite(quote)" (click)="onAddToFavorites(quote)">Favorite</button>
+            <button ion-button clear small color="danger" *ngIf="isFavotite(quote)" (click)="onRemoveFromFavorites(quote)">Unfavorite</button>
+          </ion-col> 
         </ion-row> 
       </ion-card>
 </ion-content>
