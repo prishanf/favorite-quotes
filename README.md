@@ -119,4 +119,29 @@ Object of the project is to learning Ioinc 2 step by step.
     * update the Quotes component Alert handler to use QuoteService to add Quote to Favorite
 
 7. Display Favorites on the Favoites Page
- 
+
+8. Implement the Modal to display Quote from Favorites page and Unfavorite functionality
+    * Implement The Model
+      ```javascript
+        const modal = this.modalCtrl.create(QuotePage);
+        modal.present();
+      ```
+    * Update the QuotePage to display the Quote Text and dismiss buttons to close the modal
+      ```javascript
+        constructor(private viewCtrl: ViewController) {}
+        onClose(remove=false){
+          this.viewCtrl.dismiss(remove);
+        }
+      ```
+      Use the ViewController dismiss method to remove the current page (modal overlay) from the view
+    * Pass data to display on the modal
+    * Implement Unfavotite button via model onDisDismiss view lifecycle menthod
+      ```javascript
+        modal.onDidDismiss((remove: boolean)=>{
+            if(remove){
+              this.quoteService.removeQuoteFromFavorites(quote);
+              this.quotes = this.quoteService.getFavoriteQuotes();
+            }
+        });
+      ``` 
+    
