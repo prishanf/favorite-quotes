@@ -37,10 +37,14 @@ export class FavoritesPage {
     modal.onDidDismiss((remove: boolean)=>{
         console.log(remove);
         if(remove){
-          this.quoteService.removeQuoteFromFavorites(quote);
-          this.quotes = this.quoteService.getFavoriteQuotes();
+          this.onRemoveFromFavorites(quote)
         }
     });
+  }
+
+  onRemoveFromFavorites(quote: Quote){
+    this.quoteService.removeQuoteFromFavorites(quote);
+    this.quotes = this.quoteService.getFavoriteQuotes();
   }
 
 }

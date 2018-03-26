@@ -148,3 +148,16 @@ Object of the project is to learning Ioinc 2 step by step.
 9. Add Unfavorite Functionality to Quotes Page
     * Add new `isQuoteFavorite` method to QuoteService method
     * Display/Hide favorite/Unfavorite button based on the favorited state
+
+10. Implement slide on the favorite page to unfavorite an item
+    * Use `<ion-item-sliding></ion-item-sliding>` to wrap the item
+    * Add Slide button via `<ion-item-options>`
+        ```html
+          <ion-item-options>
+            <button ion-button color="danger"
+            (click)="onRemoveFromFavorites(quote)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        ```
