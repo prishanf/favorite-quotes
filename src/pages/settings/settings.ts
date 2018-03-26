@@ -1,5 +1,6 @@
+import { SettingService } from './../../services/settings.service';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, Toggle } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,11 +9,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private settingService: SettingService){
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+  onToggle(toggle:Toggle){
+    this.settingService.setBackground(toggle.checked);
+  }
+
+  checkAltBackground(){
+    return this.settingService.isAltBackground();
   }
 
 }

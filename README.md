@@ -202,4 +202,11 @@ Object of the project is to learning Ioinc 2 step by step.
           this.nav.setRoot(page);
           this.menuCtrl.close();
         }
-      ```   
+      ```
+
+13. Implement the Settings Page
+    * Update the Settings Page Componet display toggle button
+    * Create new Service to keep track of the Settings State and implement below two methods
+        * setBackground
+        * isAltBackground
+    
