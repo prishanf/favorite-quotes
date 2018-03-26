@@ -2,9 +2,8 @@ import { QuotesService } from './../../services/quotes.service';
 import { Quote } from './../../models/quote.interface';
 import { Category } from './../../models/category.interface';
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavParams, AlertController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-quotes',
   templateUrl: 'quotes.html',
@@ -14,7 +13,6 @@ export class QuotesPage implements OnInit{
   selectedCategory:Category;
 
   constructor(
-    private navCtrl: NavController, 
     private navParams: NavParams, 
     private alertCtrl: AlertController,
     private quoteService: QuotesService) {

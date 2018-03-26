@@ -3,9 +3,8 @@ import { QuotePage } from './../quote/quote';
 import { Quote } from './../../models/quote.interface';
 import { QuotesService } from './../../services/quotes.service';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-favorites',
   templateUrl: 'favorites.html',

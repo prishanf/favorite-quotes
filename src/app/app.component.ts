@@ -1,6 +1,5 @@
 import { SettingsPage } from './../pages/settings/settings';
 import { TabsPage } from './../pages/tabs/tabs';
-import { FavoritesPage } from './../pages/favorites/favorites';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, NavController, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';

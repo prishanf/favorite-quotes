@@ -1,9 +1,7 @@
-import { QuotesService } from './../../services/quotes.service';
 import { Quote } from './../../models/quote.interface';
 import { Component } from '@angular/core';
-import { IonicPage, NavParams, ViewController } from 'ionic-angular';
+import { NavParams, ViewController } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-quote',
   templateUrl: 'quote.html',

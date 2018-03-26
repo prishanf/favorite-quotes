@@ -1,8 +1,7 @@
 import { SettingService } from './../../services/settings.service';
 import { Component } from '@angular/core';
-import { IonicPage, Toggle } from 'ionic-angular';
+import { Toggle } from 'ionic-angular';
 
-@IonicPage()
 @Component({
   selector: 'page-settings',
   templateUrl: 'settings.html',
