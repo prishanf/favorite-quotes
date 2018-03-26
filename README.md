@@ -209,4 +209,10 @@ Object of the project is to learning Ioinc 2 step by step.
     * Create new Service to keep track of the Settings State and implement below two methods
         * setBackground
         * isAltBackground
+
+14. Implement the Background Change when setting toggle
+    * Add new AltQuote background to the variable.scss file `altQuoteBackground: #319615`
+    * Upadte the code to change the Background Color base on the current setting
+
+#END    
     

@@ -1,3 +1,4 @@
+import { SettingService } from './../../services/settings.service';
 import { QuotePage } from './../quote/quote';
 import { Quote } from './../../models/quote.interface';
 import { QuotesService } from './../../services/quotes.service';
@@ -17,7 +18,8 @@ export class FavoritesPage {
     public navCtrl: NavController, 
     public navParams: NavParams, 
     private quoteService: QuotesService,
-    private modalCtrl: ModalController ) {
+    private modalCtrl: ModalController,
+    private settingService: SettingService ) {
   }
 
   ionViewDidLoad() {
@@ -45,6 +47,10 @@ export class FavoritesPage {
   onRemoveFromFavorites(quote: Quote){
     this.quoteService.removeQuoteFromFavorites(quote);
     this.quotes = this.quoteService.getFavoriteQuotes();
+  }
+
+  getBackground(){
+      return this.settingService.isAltBackground() ? 'altQuoteBackground' :'quoteBackground';
   }
 
 }
