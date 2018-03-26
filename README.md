@@ -161,3 +161,7 @@ Object of the project is to learning Ioinc 2 step by step.
             </button>
           </ion-item-options>
         ```
+11. Changing the overall theme
+    * overite the content padding `$content-padding: 8px;`
+    * create new color variable `quoteBackground: #f2f7c0`
+    * override the primary color from #488aff to #ffbb00  `primary:    #ffbb00`
