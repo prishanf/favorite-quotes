@@ -165,3 +165,41 @@ Object of the project is to learning Ioinc 2 step by step.
     * overite the content padding `$content-padding: 8px;`
     * create new color variable `quoteBackground: #f2f7c0`
     * override the primary color from #488aff to #ffbb00  `primary:    #ffbb00`
+
+12. Add Side Menu 
+    * Add button to toggle the Side Menu 
+      ```html
+        <ion-buttons start> 
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+      ```
+    * Replace the Root Page ref: app.html page
+      ```html
+        <ion-menu [content]="nav">
+          <ion-header>
+              <ion-toolbar>
+                  <ion-title>Menu</ion-title>
+              </ion-toolbar>
+          </ion-header>
+          <ion-content>
+              <ion-list>
+                  <button ion-item (click)="onLoad(tabsPage)">
+                      <ion-icon name="quote" item-left></ion-icon>
+                      Quotes
+                  </button>
+                  <button ion-item (click)="onLoad(settingsPage)">
+                      <ion-icon name="settings" item-left></ion-icon>
+                      Settings
+                  </button>
+              </ion-list>
+          </ion-content>
+      </ion-menu>
+      ```
+      ```javascript
+        onLoad(page:any){
+          this.nav.setRoot(page);
+          this.menuCtrl.close();
+        }
+      ```   
